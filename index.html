@@ -54,6 +54,33 @@
     @media(max-width:700px){.catalog-tools{gap:8px}}
     .song-actions{display:flex;flex-direction:column;align-items:stretch;gap:6px}.mastered-button.is-added{border-color:#bae6fd;background:var(--sky-soft);color:var(--sky)}.mastered-button.is-added:hover{border-color:#7dd3fc;background:#d4edfc}
     @media(max-width:1100px){.song-actions{flex-direction:row;flex-wrap:wrap;gap:8px}}
+
+    /* Compact screen layout. Print and the embedded catalog remain unchanged. */
+    @media screen{
+      :root{--sidebar-width:216px}
+      html{scroll-padding-top:16px}
+      .sidebar{padding:16px 10px}
+      .brand{gap:9px;padding:2px 6px;margin-bottom:18px;font-size:19px}.brand-mark{width:30px;height:30px;border-radius:9px}.brand-mark svg{width:19px;height:19px}
+      .nav-button{min-height:33px;padding:5px 9px;gap:8px;border-radius:7px;font-size:13px}.nav-button svg{width:16px;height:16px}.nav-button .count{padding:0 6px;font-size:10.5px;line-height:18px}.nav-label{margin:16px 9px 4px;font-size:11px}.sub-nav{min-height:29px;padding:4px 8px 4px 30px;font-size:12px}.sub-nav:before{left:15px}
+      .main{padding:20px 24px 28px}#library,.page-footer{max-width:1480px}.catalog-toolbar{gap:8px 14px;margin-bottom:12px;align-items:center}.filter-row{gap:16px;flex-basis:490px}.filter-row .filter-chip{height:34px;font-size:13px;gap:5px}.filter-row .filter-chip span{font-size:11px}.catalog-tools{flex:0 0 216px}.catalog-tools .search-box{height:32px;flex-basis:216px;border-radius:8px}.search-box input{font-size:12.5px}
+      .subfilter-row{gap:8px;margin:0 0 12px}.subfilter-label{padding-top:7px;font-size:11px}.subfilter-options{padding:2px;border-radius:9px}.subfilter-options .filter-chip{min-height:28px;padding:3px 8px;font-size:12px;gap:5px;border-radius:7px}.subfilter-options .filter-chip span{font-size:10.5px}
+      .song-group{margin-bottom:12px;padding:4px;border-radius:12px}.group-header{gap:9px;padding:8px 9px 10px}.group-icon{width:28px;height:28px;border-radius:8px}.group-icon svg{width:16px;height:16px}.group-info h2{font-size:15px}.group-total{padding:0 7px;font-size:10.5px}.recent-description{margin-top:1px;font-size:11px}
+      .table-head,.song-row{grid-template-columns:24px minmax(0,1fr) 66px 114px;column-gap:10px;padding-left:9px;padding-right:9px}.table-head{height:26px;font-size:10.5px}.song-row{min-height:0;row-gap:2px;padding-top:8px;padding-bottom:8px;border-radius:6px}.song-num{font-size:10.5px}
+      .song-main{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 9px}.song-title{font-size:13.5px;line-height:1.5}.song-title-original{margin-top:0;font-size:12px;line-height:1.5}.song-difficulty{flex-basis:100%;gap:3px 5px;margin-top:2px;font-size:10.5px;line-height:1.5}.difficulty-label{font-size:10.5px}.difficulty-badge{padding:0 6px;font-size:10px;line-height:18px}.difficulty-info>summary{padding:0;font-size:10.5px}.difficulty-panel{margin-top:4px;padding:8px 10px;font-size:11.5px}.difficulty-info[open]{margin-top:2px}.difficulty-sources{gap:4px}.difficulty-checked{font-size:10.5px}
+      .song-version{grid-row:1/3;align-self:center;font-size:11px}.version-badge{padding:0 6px;font-size:10.5px;line-height:20px}.song-credits{grid-column:2;gap:0 9px;font-size:11.5px;line-height:1.6}.credit-reference{min-height:19px;font-size:10.5px}.song-note{font-size:10.5px;line-height:1.6}
+      .song-actions{grid-column:4;grid-row:1/3;align-self:center;justify-self:end;flex-direction:column;gap:4px;margin-top:0}.recent-button{min-width:110px;min-height:28px;gap:5px;padding:3px 8px;border-radius:7px;font-size:11px;line-height:1.5}.recent-button svg{width:12px;height:12px}.actions-head{display:block;padding-right:6px}.subgroup-header{gap:6px;margin:2px 0 0;padding:6px 9px 4px;font-size:11.5px}.subgroup-header span{font-size:10.5px}
+      .empty-state{gap:7px;padding:32px 16px}.page-footer{margin-top:18px;padding-top:10px;font-size:11px;line-height:1.7}.translation-info{margin-top:5px}.translation-info summary{font-size:11px}.recent-feedback{right:18px;bottom:18px;padding:8px 12px;font-size:12px}
+    }
+    @media screen and (max-width:1180px){.main{padding-left:20px;padding-right:20px}}
+    @media screen and (max-width:1000px){
+      .table-head,.song-row{grid-template-columns:22px minmax(0,1fr) 62px}.song-version{grid-row:1}.song-credits{grid-column:2/-1}.song-actions{grid-column:2/-1;grid-row:3;justify-self:start;flex-direction:row;flex-wrap:wrap;gap:6px;margin-top:2px}.recent-button{min-width:0}.actions-head{display:none}
+    }
+    @media screen and (max-width:900px){.catalog-toolbar{gap:8px}.filter-row{flex-basis:100%}.catalog-tools{flex:1 1 100%;width:100%}.catalog-tools .search-box{max-width:100%;flex:1}.subfilter-row{gap:6px}.subfilter-label{padding-top:0}}
+    @media screen and (max-width:700px){
+      .main{padding:12px 10px 20px}.catalog-toolbar{margin-bottom:10px}.filter-row{gap:17px}.filter-row .filter-chip{height:34px;min-height:34px;font-size:12.5px}.catalog-tools .search-box{height:36px}.search-box input{font-size:16px}.search-box input::placeholder{font-size:12px}.subfilter-row{margin-bottom:10px}.subfilter-options .filter-chip{min-height:29px;padding:3px 7px;font-size:11.5px}.song-group{margin-bottom:10px}.group-header{padding:7px 7px 9px;gap:8px}.group-info h2{font-size:14px}.group-icon{width:26px;height:26px}.group-icon svg{width:15px;height:15px}
+      .song-row{grid-template-columns:16px minmax(0,1fr) 56px;column-gap:7px;row-gap:3px;padding:8px 7px}.song-main{display:block}.song-title{font-size:13px;line-height:1.5}.song-title-original{margin-top:1px;font-size:11.5px;line-height:1.5}.song-difficulty{margin-top:3px;gap:3px 5px}.difficulty-info>summary{min-height:20px}.song-version{align-self:start}.song-credits{font-size:11px;gap:0 8px;line-height:1.55}.credit-reference{min-height:21px;font-size:10.5px}.song-note{font-size:10.5px;line-height:1.55}.song-actions{gap:6px;margin-top:1px}.recent-button{min-height:32px;padding:4px 8px;font-size:11px}.subgroup-header{padding-left:7px;padding-right:7px}.page-footer{margin-top:14px}.recent-feedback{right:12px;bottom:12px}
+    }
+    @media screen and (max-width:390px){.main{padding:10px 8px 18px}.song-row{grid-template-columns:14px minmax(0,1fr) 54px;column-gap:6px;padding:7px 6px}.filter-row{gap:15px}.group-header{padding-left:6px;padding-right:6px}}
   </style>
   <noscript><style>.catalog-toolbar,.subfilter-row,.song-actions,.actions-head,.sidebar{display:none!important}.main{margin-left:0}.table-head,.song-row{grid-template-columns:32px minmax(0,1fr) 82px}@media(max-width:700px){.song-row{grid-template-columns:22px minmax(0,1fr) 66px}}</style></noscript>
 </head>
